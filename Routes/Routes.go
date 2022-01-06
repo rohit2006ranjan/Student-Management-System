@@ -1,7 +1,7 @@
 package Routes
 
 import (
-	"Student-Management-System/Controllers"
+	"github.com/rohit2006ranjan/Student-Management-System/Controllers"
 
 	"github.com/gin-gonic/gin"
 )
