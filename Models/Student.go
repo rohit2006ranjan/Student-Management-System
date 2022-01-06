@@ -17,6 +17,7 @@ func GetAllStudents(student *[]Student) (err error) {
 
 //CreateStudent ... Insert New Student data
 func CreateStudent(student *Student) (err error) {
+	fmt.Println("Inside create Student")
 	if err = Config.DB.Create(student).Error; err != nil {
 		return err
 	}
