@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
+	"Student-Management-System/Models"
+
 	"github.com/gin-gonic/gin"
-	"github.com/rohit2006ranjan/Student-Management-System/Models"
 )
 
 //GetStudents ... Get all students

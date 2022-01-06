@@ -1,4 +1,4 @@
-module github.com/rohit2006ranjan/Student-Management-System
+module Student-Management-System
 
 go 1.17
 

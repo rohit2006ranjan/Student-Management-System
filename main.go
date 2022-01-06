@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 
+	"Student-Management-System/Config"
+	"Student-Management-System/Models"
+	"Student-Management-System/Routes"
+
 	"github.com/jinzhu/gorm"
-	"github.com/rohit2006ranjan/Student-Management-System/Config"
-	"github.com/rohit2006ranjan/Student-Management-System/Models"
-	"github.com/rohit2006ranjan/Student-Management-System/Routes"
 )
 
 var err error
@@ -17,6 +18,7 @@ func main() {
 	if err != nil {
 		fmt.Println("Status:", err)
 	}
+
 	defer Config.DB.Close()
 	Config.DB.AutoMigrate(&Models.Student{})
 

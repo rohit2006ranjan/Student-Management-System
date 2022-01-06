@@ -3,8 +3,9 @@ package Models
 import (
 	"fmt"
 
+	"Student-Management-System/Config"
+
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/rohit2006ranjan/Student-Management-System/Config"
 )
 
 //GetAllStudents Fetch all student data
