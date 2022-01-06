@@ -13,9 +13,9 @@ func SetupRouter() *gin.Engine {
 	{
 		grp1.GET("student", Controllers.GetStudents)
 		grp1.POST("student", Controllers.CreateStudent)
-		grp1.GET("student/:id", Controllers.GetStudentByID)
-		grp1.PUT("student/:id", Controllers.UpdateStudent)
-		grp1.DELETE("student/:id", Controllers.DeleteStudent)
+		grp1.GET("student/:student_id", Controllers.GetStudentByID)
+		grp1.PUT("student/:student_id", Controllers.UpdateStudent)
+		grp1.DELETE("student/:student_id", Controllers.DeleteStudent)
 	}
 	return r
 }

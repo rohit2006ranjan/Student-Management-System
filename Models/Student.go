@@ -26,22 +26,22 @@ func CreateStudent(student *Student1) (err error) {
 }
 
 //GetStudentByID ... Fetch only one Student by Id
-func GetStudentByID(student *Student1, id string) (err error) {
-	if err = Config.DB.Where("id = ?", id).First(student).Error; err != nil {
+func GetStudentByID(student *Student1, student_id string) (err error) {
+	if err = Config.DB.Where("student_id = ?", student_id).First(student).Error; err != nil {
 		return err
 	}
 	return nil
 }
 
 //UpdateStudent ... Update Student Details
-func UpdateStudent(student *Student1, id string) (err error) {
+func UpdateStudent(student *Student1, student_id string) (err error) {
 	fmt.Println(student)
 	Config.DB.Save(student)
 	return nil
 }
 
 //DeleteStudent ... Delete student
-func DeleteStudent(student *Student1, id string) (err error) {
-	Config.DB.Where("id = ?", id).Delete(student)
+func DeleteStudent(student *Student1, student_id string) (err error) {
+	Config.DB.Where("student_id = ?", student_id).Delete(student)
 	return nil
 }
