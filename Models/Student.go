@@ -9,7 +9,7 @@ import (
 )
 
 //GetAllStudents Fetch all student data
-func GetAllStudents(student *[]Student) (err error) {
+func GetAllStudents(student *[]Student1) (err error) {
 	if err = Config.DB.Find(student).Error; err != nil {
 		return err
 	}
@@ -17,7 +17,7 @@ func GetAllStudents(student *[]Student) (err error) {
 }
 
 //CreateStudent ... Insert New Student data
-func CreateStudent(student *Student) (err error) {
+func CreateStudent(student *Student1) (err error) {
 	fmt.Println("Inside create Student")
 	if err = Config.DB.Create(student).Error; err != nil {
 		return err
@@ -26,7 +26,7 @@ func CreateStudent(student *Student) (err error) {
 }
 
 //GetStudentByID ... Fetch only one Student by Id
-func GetStudentByID(student *Student, id string) (err error) {
+func GetStudentByID(student *Student1, id string) (err error) {
 	if err = Config.DB.Where("id = ?", id).First(student).Error; err != nil {
 		return err
 	}
@@ -34,14 +34,14 @@ func GetStudentByID(student *Student, id string) (err error) {
 }
 
 //UpdateStudent ... Update Student Details
-func UpdateStudent(student *Student, id string) (err error) {
+func UpdateStudent(student *Student1, id string) (err error) {
 	fmt.Println(student)
 	Config.DB.Save(student)
 	return nil
 }
 
 //DeleteStudent ... Delete student
-func DeleteStudent(student *Student, id string) (err error) {
+func DeleteStudent(student *Student1, id string) (err error) {
 	Config.DB.Where("id = ?", id).Delete(student)
 	return nil
 }

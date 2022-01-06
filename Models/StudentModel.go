@@ -1,14 +1,14 @@
 package Models
 
-type Student struct {
-	student_id      uint   `json:"id"`
-	first_name      string `json:"firstName"`
-	last_name       string `json:"lastName"`
-	mobile          string `json:"mobile"`
-	year_of_joining string `json:"yearOfJoining"`
-	email_id        string `json:"emailId"`
+type Student1 struct {
+	Student_id      uint   `json:"student_id"`
+	First_name      string `json:"first_name"`
+	Last_name       string `json:"last_name"`
+	Mobile          string `json:"mobile"`
+	Year_of_joining string `json:"year_of_joining"`
+	Email_id        string `json:"email_id"`
 }
 
-func (b *Student) TableName() string {
+func (b *Student1) TableName() string {
 	return "student"
 }
