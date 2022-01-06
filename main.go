@@ -22,7 +22,7 @@ func main() {
 	defer Config.DB.Close()
 	//Config.DB.AutoMigrate(&Models.Student{})
 
-	Config.DB.AutoMigrate(&Models.Student1{})
+	Config.DB.AutoMigrate(&Models.Student{})
 
 	r := Routes.SetupRouter()
 	//running
